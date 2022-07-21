@@ -1,0 +1,660 @@
+/*
+****PALETA DE COLORES****
+#E8A0BF
+#A760FF
+#4C0070
+
+****MIS FUENTES****
+font-family: 'Oswald', sans-serif;
+font-family: 'Staatliches', cursive;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap'); /*llamado a las tipografias por css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/*se genera el reset para que se vea igual la pagina en todos los navegadores*/
+
+/***************MOBILE FIRST*******************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100%;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    background-image: url(../images/fondoSirena.jpg);
+
+}
+
+/*---------------------------------------GRID AREA*/
+
+
+.grillaGeneral{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+                        "header"
+                        "titulo"
+                        "contenido"
+                        "masVendidos"
+                        "tutorial"
+                        "preguntas"
+                        "aside"
+                        "footer";
+
+}
+
+header{
+    grid-area: header;
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.divFotoPrincipal{
+    grid-area: contenido;
+}
+
+.grillaMasVendidos{
+    grid-area: masVendidos;
+}
+
+.divTutorial{
+    grid-area: tutorial;
+}
+
+.preguntasFrecuentes{
+    grid-area: preguntas;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+.masVendidos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    gap: 15px;
+    justify-items: center;
+}
+/*---------------------------------------------------------------------------------------------------HEADER----------*/
+
+
+.titulo p{ display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bolder;
+    color: whitesmoke
+
+}
+header {
+    /*position: sticky;
+    top: 0.1px;*/
+    padding: 30px;
+    margin: 0px 1px 0px 1px ;
+    background-image: url(../images/fondoSirena.jpg);
+}
+
+/*con el position sticky puedo dejar la barra de navegacion fija al scrollear la pagina*/
+
+
+.barraNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+
+.barraNav li {
+    border: 5px solid  white;
+    padding: 10px;
+    background-color: black;
+}
+
+.barraNav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+/*
+con la propiedad list-style:none quitamos los puntitos (bullets) de la lista
+con text-decoration: none quitamos el subrayado
+*/
+
+
+/*-----------------------------------------------------------------------------------------------MAIN---------*/
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Staatliches', cursive;
+    color: white;
+    font-size: 2.5em;
+    padding: 25px;
+    text-align: center;
+    border: 3px white solid;
+    border-radius: 75px;
+    margin: 20px 0px 20px 0px;
+    background-color: #A760FF;
+}
+
+/*border: tiene que tener 3 calores MEDIDA-TIPO DE BORDE-COLOR */
+
+
+img{
+    border: 8px solid #A760FF;
+    margin-top: 15px;
+}
+
+
+
+.masVendidos {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 10px;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+.styleImgMasVendidos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.masVendidos img {
+    width: 55%;
+}
+
+
+/*
+las class se llaman por un . (punto)
+font weight: bold es para ponerlo en negrita
+*/
+
+
+.divfotoPrincipal {
+    display: flex;
+    justify-content: center;
+}
+
+.styleFotoPrincipal{
+    width: 550px;
+    height: 500px;
+    margin: 0 3px 0 3px ;
+
+}
+/*los id sirven para destacar solo 1. No es repetible */
+
+.divTutorial{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+iframe {
+    width: 550px;
+    height: 500px;
+}
+
+
+/*------------------------------------------------------------------------------------------ARTICLE----------*/
+
+h5 {
+    text-align: center;
+    border-radius: 0;
+    background-color: #4C0070;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+
+.preguntasFrecuentes div {
+    background-color: #4C0070;
+
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    border: 2px solid white;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
+
+.irAlEncabezado {
+    text-align: center;
+    margin-top: 25px ;
+}
+
+
+.irAlEncabezado a {
+    font-size: 2em ;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+/*----------------------------------------------------------------------------------FOOTER----------*/  
+
+h6{
+    color: white;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+
+footer {
+    padding: 25px;
+    background-image: url(../images/fondoSirena.jpg);
+    border: 5px solid white;
+    margin: 0 1px 0 1px;
+}
+
+
+
+
+.redesSociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-family: 'Staatliches', cursive;
+    text-align: center;
+}
+
+
+
+.redesSociales li {
+    padding: 10px;
+    border: 5px double white;
+    background-image: url(../images/fondoSirena.jpg);
+
+
+}
+
+
+.redesSociales li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
+
+@media (min-width:768px) {
+
+    .masVendidos{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin: 0;
+    }
+
+
+    .barraNav {
+        justify-content: space-between;
+    }
+
+
+    .barraNav li a {
+        font-size: 1.8em;
+    }
+    
+
+    h5 {
+        text-align: right;
+    }
+    
+
+    .preguntasFrecuentes div {
+        text-align: right;
+    }
+
+
+    .irAlEncabezado {
+        text-align: center;
+    }
+    
+
+    .redesSociales {
+        justify-content: space-evenly;
+    }
+}
+
+
+
+@media (min-width:1024px) {
+
+    .masVendidos{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        margin: 0;
+    }
+
+    body {
+        background-image: none;
+        background-color: #E8A0BF;
+    }
+
+
+    header{
+        border: 5px solid white;
+    }
+
+    .titulo p{ 
+        color: white
+    
+    }
+
+    .barraNav {
+        justify-content: space-evenly;
+    }
+
+
+    .barraNav li a {
+        font-size: 2.3em;
+    }
+    
+
+    h5 {
+        text-align: left;
+    }
+    
+
+
+    .grillaMasVendidos{
+        background-image: url(../images/fondoSirena.jpg);
+    }
+
+
+    iframe {
+        width: 850px;
+        height: 600px;
+    }
+
+
+    .preguntasFrecuentes div {
+        text-align: left;
+    }
+
+
+    .irAlEncabezado {
+        text-align: right;
+    }
+    
+
+    .redesSociales {
+        justify-content: space-evenly;
+    }
+
+
+    .redesSociales li a {
+        font-size: 2.5em;
+    }
+
+    h6{
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding: 25px;
+        background-image: url(../images/fondoSirena.jpg);
+        border: none;
+        margin: 0
+    }
+}
+
+/***************************************************--PRODUCTOS-*/
+
+.divProductos{
+    margin: 10px 0px 10px 130px ;
+}
+
+
+.divProductos img {
+    width: 400px;
+    height: 400px;
+    padding: 15px;
+}
+
+
+.divTextoProductos{
+    margin: 100px 0px 50px 200px;
+}
+
+
+.divTextoProductos p {
+    display: inline-block;
+    color: white;
+    background-color: #A760FF;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    padding: 50px 25px 50px 25px ;
+    margin-left: 50px;
+    margin-right: 125px;
+    text-align: center;
+}
+/***************************************************---PRODUCTOS-*/
+
+.divProductos{
+    margin: 10px 0px 10px 130px ;
+}
+
+
+.divProductos img {
+    width: 400px;
+    height: 400px;
+    padding: 15px;
+}
+
+
+.divTextoProductos{
+    margin: 100px 0px 50px 200px;
+}
+
+.divTextoProductos p {
+    display: inline-block;
+    color: white;
+    background-color: #A760FF;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    padding: 50px 25px 50px 25px ;
+    margin-left: 50px;
+    margin-right: 125px;
+    text-align: center;
+}
+
+
+
+/*----------------------------------------------------------------GALERIA---------------*/
+
+.grillaGeneralGaleria{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+                        "header"
+                        "grillaGaleria"
+                        "aside"
+                        "footer";
+}
+
+.grillaGeneralGaleria{
+    grid-area: grillaGaleria;
+}
+
+
+.gridGaleria{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+
+
+.styleImgGaleria{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+.gridGaleria img {
+    width: 55%;
+    }
+
+
+@media (min-width:768px){
+
+    .gridGaleria{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin: 0;
+    }
+
+    .gridGaleria img{
+        width: 75%;
+    }
+}
+
+
+@media (min-width:1024px){
+
+    .gridGaleria{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gridGaleria img{
+        width: 90%;
+    }
+
+}
+
+
+
+/*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
+
+.divSobreNosotros p {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+.imgSobreNosotros {
+    display: inline;
+    width: 750px;
+    height: 750px;
+}
+
+.SobreNosotrosPrimerParrafo {
+    display: inline;
+    font-size: 30px;
+
+}
+
+
+.img2SobreNosotros {
+    display: inline;
+    width: 750px;
+    height: 750px;
+    margin-right: 250px;
+}
+
+.SobreNosotrosSegundoParrafo {
+    display: inline;
+    font-size: 30px;
+    
+}
+
+
+
+
+/*------------------------------------------CONTACTO-----------------S*/
+
+.divContacto p {
+    display: inline-block;
+    color: white;
+    background-color: #A760FF;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    text-align: left;
+    margin: 30px 0px 30px 30px ;
+    padding: 30px;
+}
+
+form{
+    margin: 25px 25px 25px 50px;
+}
+
+
+input,label,textarea{
+    padding-right: 15px;
+    width: 500px;
+    height: 75px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/*.flex-container { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E8A0BF;
+    padding: 30px;
+    height: 250px;
+}
+
+
+.flex-container div {
+    background-color: #A760FF;
+    padding: 20px;
+    margin: 10px;
+}*/
+
+
+/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
