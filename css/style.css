@@ -1070,3 +1070,13 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
 }
 
+
+/*******************IMAGENES SECTION GALERIA*****************/
+.gridGaleria img:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px white;
+    -webkit-box-shadow: 0px 0px 15px 15px white;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    }
