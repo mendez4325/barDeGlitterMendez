@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/style.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <title>Galeria</title>
 </head>
 <body>
@@ -15,17 +19,17 @@
         <header>
             <nav id="encabezado">   <!--Barra de navegación-->
                 <ul class="barraNav"> <!-- <ul> con los enlaces relativos -->
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="productos.html">PRODUCTOS</a></li>
-                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
-                    <li><a href="galeria.html">GALERIA</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="animation-Woble"><a class="animation-Flicker" href="../index.html">INICIO</a></li>
+                    <li class="animation-Woble"><a class="animation-Flicker" href="productos.html">PRODUCTOS</a></li>
+                    <li class="animation-Woble"><a class="animation-Flicker" href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li class="animation-Woble"><a class="animation-Flicker" href="galeria.html">GALERIA</a></li>
+                    <li class="animation-Woble"><a class="animation-Flicker" href="contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </header>
     
         <section class="grillaGaleria">
-            <h1>ESTOS SON ALGUNOS TRABAJITOS</h1>
+            <h1 class="animation-textSombra">ESTOS SON ALGUNOS TRABAJITOS</h1>
             <div class="gridGaleria">
                 <img class="styleImgGaleria" src="../images/imagesGaleria/imgGaleria1.jpg" alt="Maquilaje glitter">
                 <img class="styleImgGaleria" src="../images/imagesGaleria/imgGaleria2.jpg" alt="Glitter en gel, gris oscuro">
@@ -44,15 +48,20 @@
             </aside>
     
 
-        <footer>
-            <h6>Acá tenemos las redes sociales</h6>
-            <ul class="redesSociales"> <!--<ul> con los enlaces absolutos. Proximamente se crearán las redes -->
-                <li><a href="http://" target="_blank">Instagram</a></li>
-                <li><a href="http://" target="_blank">TikTok</a></li>
-                <li><a href="http://" target="_blank">WhatsApp</a></li>
-                <li><a href="http://" target="_blank">Facebook</a></li>
-            </ul>
-    </footer>
+            <footer>
+                <h6 data-aos="zoom-in">Acá tenemos las redes sociales</h6>
+                <ul class="redesSociales"> <!--<ul> con los enlaces absolutos. Proximamente se crearán las redes -->
+                    <li class="shake-slow"><a href="http://" target="_blank">Instagram</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">TikTok</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">WhatsApp</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">Facebook</a></li>
+                </ul>
+            </footer>
+            
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
     </div>
 </body>
 </html>
