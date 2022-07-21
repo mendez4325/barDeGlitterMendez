@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
     <title>Inicio</title>
 </head>
 
@@ -26,7 +32,7 @@
         </header>
 
         <article class="titulo">
-            <h1>SIRENA GLITTER BAR</h1>
+            <h1 class="animate__heartBeat">SIRENA GLITTER BAR</h1>
             <p>Bienvenidos a nuestra página, espero que la disfrutes</p>
         </article>
 
@@ -75,18 +81,23 @@
             </article>
 
             <aside>   
-                <div class="irAlEncabezado"><a href="#encabezado">Ir al encabezado</a></div>
+                <div class="irAlEncabezado"><a class="animation-irAlEncabezado"  href="#encabezado">Ir al encabezado</a></div>
             </aside>
         
-        <footer>
-                <h6>Acá tenemos las redes sociales</h6>
+            <footer>
+                <h6 data-aos="zoom-in">Acá tenemos las redes sociales</h6>
                 <ul class="redesSociales"> <!--<ul> con los enlaces absolutos. Proximamente se crearán las redes -->
-                    <li><a href="http://" target="_blank">Instagram</a></li>
-                    <li><a href="http://" target="_blank">TikTok</a></li>
-                    <li><a href="http://" target="_blank">WhatsApp</a></li>
-                    <li><a href="http://" target="_blank">Facebook</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">Instagram</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">TikTok</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">WhatsApp</a></li>
+                    <li class="shake-slow"><a href="http://" target="_blank">Facebook</a></li>
                 </ul>
         </footer>
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </div>
 </body>
 

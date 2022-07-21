@@ -608,7 +608,7 @@ footer {
 
 
 
-/*------------------------------------------CONTACTO-----------------S*/
+/*------------------------------------------CONTACTO-----------------*/
 
 .divContacto p {
     display: inline-block;
@@ -1040,3 +1040,33 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
         transform: rotate(360deg);
     }
 }
+
+
+/*******************ENCABEZADO*****************/
+.animation-irAlEncabezado:hover{
+	-webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
+@keyframes text-blur-out {
+    0% {
+        -webkit-filter: blur(0.01);
+        filter: blur(0.01);
+    }
+    100% {
+        -webkit-filter: blur(12px) opacity(0%);
+        filter: blur(12px) opacity(0%);
+    }
+}
+
