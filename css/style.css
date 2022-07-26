@@ -30,6 +30,7 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
     background-image: url(../images/fondoSirena.jpg);
+
 }
 
 .styleBody{
@@ -38,10 +39,10 @@ body {
 }
 
 .styleTitulos{
+    color: white;
     font-family: 'Staatliches', cursive;
     font-weight: bolder;
 }
-
 
 /*---------------------------------------GRID AREA*/
 
@@ -226,7 +227,7 @@ font weight: bold es para ponerlo en negrita
 
 
 iframe {
-    width: 70%
+    width: 70%;
 }
 
 
@@ -268,7 +269,12 @@ aside .irAlEncabezado a{
     color: white;
 }
 
+
+
 /*----------------------------------------------------------------------------------FOOTER----------*/  
+
+
+
 
 footer {
     background-color: #E8A0BF;
@@ -438,11 +444,11 @@ footer {
         margin: 0
     }
 
-    .styleBody{
-        background-image: none;
-        background-color: #E8A0BF;
-    
-    }
+.styleBody{
+    background-image: none;
+    background-color: #E8A0BF;
+
+}
 }
 
 /***************************************************--PRODUCTOS-*/
@@ -477,7 +483,7 @@ footer {
 .divTextoProductos p{
     color: white;
     font-size: 1.5em;
-
+    
 }
 
 
@@ -517,7 +523,6 @@ footer{
     gap: 15px;
     justify-items: center;
 }
-
 
 .styleImgProductos{
     display: flex;
@@ -565,6 +570,9 @@ width: 55%;
     }
 
 }
+
+
+
 
 /*----------------------------------------------------------------GALERIA---------------*/
 
@@ -637,6 +645,7 @@ width: 55%;
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 
+
 .grillaGeneralSobreNosotros{
     display: grid;
     gap: 20px;
@@ -679,7 +688,7 @@ width: 55%;
     justify-self: center;
     width: 50%;
     height: 50%;
-
+    
 }
 
 @media (min-width:768px){
@@ -697,14 +706,13 @@ width: 55%;
     }
 
 }
-
-/*------------------------------------------CONTACTO-----------------*/
+/*------------------------------------------CONTACTO-----------------S*/
 
 .sectionContactos{
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    
 }
 
 
@@ -745,9 +753,32 @@ text-align: center;    color: white;
 
 
 
-/*****************************ANIMACIONES***************************/
+/*.flex-container { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E8A0BF;
+    padding: 30px;
+    height: 250px;
+}
 
-/*NAV*/
+
+.flex-container div {
+    background-color: #A760FF;
+    padding: 20px;
+    margin: 10px;
+}*/
+
+
+/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
+
+
+
+/*******************ANIMACIONES*****************/
+
+/*HEADER*/
 .animation-Flicker:hover {
 	-webkit-animation: text-flicker-in-glow 2s linear both;
     animation: text-flicker-in-glow 2s linear both;
@@ -1086,7 +1117,8 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
 }
 
 
-/*******************TITULOS*****************/
+
+/*TITULOS*/
 .animation-textSombra:hover {
 	-webkit-animation: text-shadow-pop-top 0.6s both;
 	animation: text-shadow-pop-top 0.6s both;
@@ -1120,8 +1152,8 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
 }
 
 
-/*******************IMAGEN PRINCIPAL*****************/
-.animation-ImgPrincipal:hover {
+/*IMAGEN PRINCIPAL*/
+.animationImgPrincipal:hover {
 	-webkit-animation: rotate-center 1s ease-in-out both;
 	animation: rotate-center 1.5s ease-in-out both;
 }
@@ -1151,7 +1183,7 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
 }
 
 
-/*******************ENCABEZADO*****************/
+/*ENCABEZADO*/
 .animation-irAlEncabezado:hover{
 	-webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -1179,8 +1211,7 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     }
 }
 
-
-/*******************IMAGENES SECTION GALERIA*****************/
+/*IMAGENES SECTION GALERIA*/
 .gridGaleria img:hover{
     border-radius:50%;
     -webkit-border-radius:50%;
@@ -1189,3 +1220,5 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     }
+
+
