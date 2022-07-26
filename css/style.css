@@ -700,28 +700,45 @@ width: 55%;
 
 /*------------------------------------------CONTACTO-----------------*/
 
-.divContacto p {
-    display: inline-block;
-    color: white;
+.sectionContactos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.divContacto {
+text-align: center;    color: white;
     background-color: #A760FF;
     font-weight: bold;
     font-size: 20px;
     border: 3px solid white;
-    text-align: left;
-    margin: 30px 0px 30px 30px ;
     padding: 30px;
+    margin: 15px 10px 0 10px;
 }
 
-form{
-    margin: 25px 25px 25px 50px;
+.grillaGeneralContactos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    grid-template-areas: 
+                        "header"
+                        "sectionContactos"
+                        "form"
+                        "aside"
+                        "footer";
 }
 
 
-input,label,textarea{
-    padding-right: 15px;
-    width: 500px;
-    height: 75px;
-    margin-bottom: 15px;
+.sectionContactos{
+    grid-area: sectionContactos;
+}
+
+.form{
+    grid-area: form;
+    color: white;
 }
 
 
