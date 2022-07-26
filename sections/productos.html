@@ -7,15 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/style.css">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-
     <title>Productos</title>
 </head>
 <body>
+    <div class="grillaGeneralProductos">
     <header>
         <nav id="encabezado">   <!--Barra de navegación-->
             <ul class="barraNav"> <!-- <ul> con los enlaces relativos -->
@@ -27,40 +24,38 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
+
+    <section class="grillaProductos">
         <h1 class="animation-textSombra">PRODUCTOS</h1>
-        
-        <section>
-            <div class="divProductos">
-                <img src="../images/ejemplo1.jpg" alt="Maquilaje glitter">
-                <img src="../images/producto2.jpg" alt="Glitter en gel, gris oscuro">
-                <img src="../images/producto3.jpg" alt="Glitter en gel, gris claro">
-                <img src="../images/producto4.jpg" alt="Glitter en gel, color marfil">
-                <img src="../images/producto5.jpg" alt="Glitter en gel rosa">
-                <img src="../images/producto6.jpg" alt="Glitter en gel violeta">
-                <img src="../images/producto7.jpg" alt="Glitter en gel azul">
-                <img src="../images/producto8.jpg" alt="Pack de 3 glitter en gel ">
-                <img src="../images/producto9.jpg" alt="Glitter en gel especial">
-                <img src="../images/producto10.jpg" alt="Glitter en gel diamante">
-                <img src="../images/producto11.jpg" alt="Glitter en gel rubí">
-                <img src="../images/producto12.jpg" alt="Glitter en gel pink">
+
+        <div class="gridProductos">
+                    <img class="styleImgProductos" src="../images/ejemplo1.jpg" alt="Maquilaje glitter">
+                    <img class="styleImgProductos" src="../images/producto2.jpg" alt="Glitter en gel, gris oscuro">
+                    <img class="styleImgProductos" src="../images/producto3.jpg" alt="Glitter en gel, gris claro">
+                    <img class="styleImgProductos" src="../images/producto4.jpg" alt="Glitter en gel, color marfil">
+                    <img class="styleImgProductos" src="../images/producto5.jpg" alt="Glitter en gel rosa">
+                    <img class="styleImgProductos" src="../images/producto6.jpg" alt="Glitter en gel violeta">
+                    <img class="styleImgProductos" src="../images/producto7.jpg" alt="Glitter en gel azul">
+                    <img class="styleImgProductos" src="../images/producto8.jpg" alt="Pack de 3 glitter en gel ">
+                    <img class="styleImgProductos" src="../images/producto9.jpg" alt="Glitter en gel especial">
+                    <img class="styleImgProductos" src="../images/producto10.jpg" alt="Glitter en gel diamante">
+                    <img class="styleImgProductos" src="../images/producto11.jpg" alt="Glitter en gel rubí">
+                    <img class="styleImgProductos" src="../images/producto12.jpg" alt="Glitter en gel pink">                
             </div>
         </section>
-        
-        <section>
-            <div class="divTextoProductos">
-                <p>ENVÍO GRATIS A COMPRAS MAYORES A $5000<br>Entregas a todo el país</p>
-                <p>PAGÁ COMO QUIERAS<br>Tarjetas de crédito o efectivo </p>
-                <p>SITIO SEGURO<br>Tus datos siempre protegidos</p>
+
+        <section class="grillaMensajes">
+            <div class="gridMensajes">
+                <div class="divTextoProductos"><p>ENVÍO GRATIS A COMPRAS MAYORES A $5000<br>Entregas a todo el país</p></div>
+                <div class="divTextoProductos"><p>PAGÁ COMO QUIERAS<br>Tarjetas de crédito o efectivo </p></div>
+                <div class="divTextoProductos"><p>SITIO SEGURO<br>Tus datos siempre protegidos</p></div>
             </div>
         </section>
-        
+
         <aside>   
             <div class="irAlEncabezado"><a class="animation-irAlEncabezado"  href="#encabezado">Ir al encabezado</a></div>
         </aside>
-    </main>
-    
+
     <footer>
         <h6 data-aos="zoom-in">Acá tenemos las redes sociales</h6>
         <ul class="redesSociales"> <!--<ul> con los enlaces absolutos. Proximamente se crearán las redes -->
@@ -70,7 +65,8 @@
             <li class="shake-slow"><a href="http://" target="_blank">Facebook</a></li>
         </ul>
     </footer>
-    
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
