@@ -637,41 +637,66 @@ width: 55%;
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 
-.divSobreNosotros p {
+.grillaGeneralSobreNosotros{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+                        "header"
+                        "parrafos"
+                        "imagenes"
+                        "aside"
+                        "footer";
+}
+
+.divSobreNosotros{
+    grid-area: parrafos;
+
+}
+
+.divImgSobreNosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    grid-area: imagenes;
+}
+
+.styleImgSobreNosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divSobreNosotros p{
     text-align: center;
-    font-size: 30px;
+    color: white;
+}
+
+.divImgSobreNosotros img {
+    justify-self: center;
+    width: 50%;
+    height: 50%;
 
 }
 
+@media (min-width:768px){
 
-.imgSobreNosotros {
-    display: inline;
-    width: 750px;
-    height: 750px;
-}
-
-.SobreNosotrosPrimerParrafo {
-    display: inline;
-    font-size: 30px;
-
+    .divImgSobreNosotros img{
+        width: 60%;
+    }
 }
 
 
-.img2SobreNosotros {
-    display: inline;
-    width: 750px;
-    height: 750px;
-    margin-right: 250px;
+@media (min-width:1024px){
+
+    .divImgSobreNosotros img{
+        width: 40%;
+    }
+
 }
-
-.SobreNosotrosSegundoParrafo {
-    display: inline;
-    font-size: 30px;
-    
-}
-
-
-
 
 /*------------------------------------------CONTACTO-----------------*/
 
