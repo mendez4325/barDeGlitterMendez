@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100%;
+    height: 100vh;
 
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
@@ -35,8 +35,6 @@ body {
 
 .styleBody{
     font-family: 'Oswald', sans-serif;
-    height: 100%;
-
 
 }
 
@@ -129,17 +127,18 @@ header {
 
 .barraNav {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     font-family: 'Staatliches', cursive;
+    text-align: center;
 }
 
 .barraNav li {
     border: 5px solid  white;
     padding: 10px;
     background-color: black;
-    margin: 5px 0px 5px 0px ;
 }
 
 .barraNav li a {
@@ -327,7 +326,6 @@ footer {
 
 
     .barraNav {
-        flex-direction: column;
         justify-content: space-between;
     }
 
@@ -389,7 +387,6 @@ footer {
     }
 
     .barraNav {
-        flex-direction: row;
         justify-content: space-evenly;
     }
 
