@@ -6,118 +6,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/fa162d907d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/fa162d907d.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+
+    <link rel="stylesheet" href="./css/style.css">
     <title>Inicio</title>
 </head>
+
 <body class="styleBody">
     <div class="grillaGeneral">
 
-        <header>
-            <nav id="encabezado">   <!--Barra de navegación-->
-                <ul class="barraNav"> <!-- <ul> con los enlaces relativos -->
-                    <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="index.HTML">INICIO</a></li>
-                    <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="./sections/productos.html">PRODUCTOS</a></li>
-                    <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="./sections/nosotros.html">SOBRE NOSOTROS</a></li>
-                    <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="./sections/galeria.html">GALERIA</a></li>
-                    <li class="animation-Woble"><a class="animation-Flicker styleTitulos" href="./sections/contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
+        <!-- NavBar -->
+        <header id="encabezado">
+            <div class= "menu-bar" >
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                    <div class="container-fluid">
+                        <a class="navbar-brand animation-Flicker" href="#">Sirena</a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="./sections/productos.html">Productos</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="./sections/galeria.html">Galeria</a>
+                                </li>
+
+                                <li class="nav-item me-5">
+                                    <a class="nav-link" href="./sections/nosotros.html">Nosotras</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./sections/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
+        <!-- /NavBar -->
 
         <article class="titulo text-center">
-            <h1 class="animate__heartBeat display-1 styleTitulos">SIRENA GLITTER BAR</h1>
             <p>Bienvenidos a nuestra página, espero que la disfrutes</p>
         </article>
 
-        <div>               
-            <h2 class="animation-textSombra display-4 styleTitulos">FOTO PRINCIPAL</h2>
-            <div class="divFotoPrincipal">
-                <img class="styleFotoPrincipal animationImgPrincipal  rounded mx-auto d-block" src="./images/glitter.jpg" alt="Persona maquillada con glitter"> <!--img principal de mayor tamaño que las demás-->
+        <!-- Carousel -->
+        <div id="carouselExampleSlidesOnly" class=" divCarousel carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="./images/prueba1.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="./images/prueba2.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="./images/prueba3.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
         </div>
-            
-            <section class="grillaMasVendidos">
-                <h3 class="animation-textSombra display-4 styleTitulos">LOS MÁS VENDIDOS</h3> <!--Acá se pondrán los productos PROPIOS más vendidos-->
-                <div class="masVendidos">
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo1.jpg" alt="">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo2.jpg" alt="">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo3.jpg" alt="">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo4.jpg" alt="">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo1.jpg" alt="">
-                    </div>
-                    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
-                        <img src="./images/ejemplo2.jpg" alt="">
-                    </div>
-                    
+        <!-- /Carousel -->
+
+
+        <!-- Más Vendidos -->
+        <section class="grillaMasVendidos">
+            <h3 class="animation-textSombra display-4 styleTitulos">LOS MÁS VENDIDOS</h3> <!--Acá se pondrán los productos PROPIOS más vendidos-->
+
+            <div class="masVendidos">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo1.jpg" alt="">
                 </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo2.jpg" alt="">
+                </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo3.jpg" alt="">
+                </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo4.jpg" alt="">
+                </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo1.jpg" alt="">
+                </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="styleImgMasVendidos">
+                    <img src="./images/ejemplo2.jpg" alt="">
+                </div>
+
+                </div>
+        </section>
+        <!-- /Más Vendidos -->
+
+
+        <!-- Video Tutorial -->
+        <div>
+            <h4 class="animation-textSombra display-4 styleTitulos">TUTORIAL</h4>
+            <div class="divTutorial">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1gHN1r542cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            </div>  
+        </div>
+        <!-- /Video Tutorial -->
+
+
+        <!-- Accordion -->
+        <div class="accordion preguntasFrecuentes" id="accordionExample">
+            <h4>PREGUNTAS FRECUENTES</h4>
+            <div class="accordion-item ">
+                <h7 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Se puede comer el glitter?</button>
+                </h7>
+
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>NO, no se puede.</strong>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio eaque minus laudantium quos aut nobis.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item ">
+                <h7 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Me puede dar una reaccion alergica?
+                    </button>
+                </h7>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>No te preocupes, nuestro glitter es hipoalergenico.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem sunt et.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item ">
+                <h7 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Se queda para siempre pegado el glitter?</button>
+                </h7>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>No, dura bastantante pero tampoco tanto.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Accordion -->
+
+
+        <!-- Ir al Encabezado -->
+        <aside>   
+            <div class="irAlEncabezado"><a class="animation-irAlEncabezado "  href="#encabezado">Ir al encabezado</a></div>
+        </aside>
+        <!-- /Ir al Encabezado -->
+
+
+        <!-- Footer -->
+        <footer class=" text-center text-white">
+
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fab fa-instagram"></i
+                ></a>
+
+                <!-- WhatsApp -->
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
+
+                <!-- TikTok -->
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-tiktok"></i></a>
             </section>
-    
-            <div>
-                <h4 class="animation-textSombra display-4 styleTitulos">TUTORIAL</h4>
-                <div class="divTutorial">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1gHN1r542cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-                </div>  
+            <!-- Section: Social media -->
+
             </div>
-            
-            <article class="preguntasFrecuentes">
-                <h5 class="display-5 styleTitulos" >Preguntas frecuentes</h5>
-                <div><p>¿Se queda para siempre pegado el glitter?</p></div>
-                <div><p>¿Se puede comer el glitter?</p></div>
-                <div><p>¿Puedo ser alergico al glitter?</p></div>
-            </article>
-            <aside>   
-                <div class="irAlEncabezado"><a class="animation-irAlEncabezado "  href="#encabezado">Ir al encabezado</a></div>
-            </aside>
+            <!-- Grid container -->
 
-            <footer class=" text-center text-white">
-
-                <!-- Grid container -->
-                <div class="container p-4 pb-0">
-
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fab fa-instagram"></i
-                    ></a>
-
-                    <!-- WhatsApp -->
-                    <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
-
-                    <!-- TikTok -->
-                    <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-tiktok"></i></a>
-                </section>
-                <!-- Section: Social media -->
-
-                </div>
-                <!-- Grid container -->
-
-                <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright
-            </div>
             <!-- Copyright -->
-            </footer>    
-            
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright
+        </div>
+        <!-- Copyright -->
+        </footer>    
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();

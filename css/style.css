@@ -10,32 +10,43 @@ font-family: 'Staatliches', cursive;
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap'); /*llamado a las tipografias por css*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
 }
 
 /*se genera el reset para que se vea igual la pagina en todos los navegadores*/
 
 /***************MOBILE FIRST*******************/
 
-body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 100vh;
 
-    font-family: 'Oswald', sans-serif;
-    font-weight: bolder;
-    background-image: url(../images/fondoSirena.jpg);
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem!important;
+    color: white!important;
+}
 
+.titulo p{
+    font-size: 2rem;
+    color: white;
 }
 
 .styleBody{
     font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    background-color: #E8A0BF;
+}
+
+.container-fluid .navbar-brand a {
+    color: white;
 }
 
 .styleTitulos{
@@ -53,7 +64,7 @@ body {
     grid-template-areas: 
                         "header"
                         "titulo"
-                        "contenido"
+                        "carousel"
                         "masVendidos"
                         "tutorial"
                         "preguntas"
@@ -70,8 +81,8 @@ header{
     grid-area: titulo;
 }
 
-.divFotoPrincipal{
-    grid-area: contenido;
+.divCarousel{
+    grid-area: carousel;
 }
 
 .grillaMasVendidos{
@@ -92,6 +103,8 @@ aside{
 
 footer{
     grid-area: footer;
+    background-image: url(../images/fondoSirena.jpg);
+
 }
 
 
@@ -102,55 +115,53 @@ footer{
     gap: 15px;
     justify-items: center;
 }
-/*---------------------------------------------------------------------------------------------------HEADER----------*/
 
 
-.titulo p{ display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    font-weight: bolder;
-    color: whitesmoke
-
+header{
+    padding: 0;
+    margin: 0;
 }
-header {
-    /*position: sticky;
-    top: 0.1px;*/
-    padding: 30px;
-    margin: 0px 1px 0px 1px ;
-    background-image: url(../images/fondoSirena.jpg);
-}
+.menu-bar{
+    background: linear-gradient(-90deg, rgba(232,160,191,1) 14%, rgba(167,96,255,1) 100%);}
 
-/*con el position sticky puedo dejar la barra de navegacion fija al scrollear la pagina*/
+.nav-link{
+    font-size: 30px;
+    margin: 3px;
+    color: white!important;
+    font-weight: 500;}
 
 
-.barraNav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    font-family: 'Staatliches', cursive;
-    text-align: center;
+.menu-bar .navbar-toggler {
+    outline: none!important;
+    border: none!important;
 }
 
-.barraNav li {
-    border: 5px solid  white;
-    padding: 10px;
-    background-color: black;
-}
-
-.barraNav li a {
-    text-decoration: none;
+.navbar .fa{
     color: white;
-    font-size: 1.1em;
+    font-size: 26px;
 }
 
-/*
-con la propiedad list-style:none quitamos los puntitos (bullets) de la lista
-con text-decoration: none quitamos el subrayado
-*/
+.nav-link:hover{
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    border-bottom: none;
+}
+
+@media (min-width: 1024px){
+    .nav-link:hover{
+        border-bottom: white 1px solid;
+    }
+}
+
+.slide img {
+    height: 50vh;
+    
+}
+
+.accordion-item{
+    font-family: 'Staatliches', cursive;
+    color: white;
+}
 
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
@@ -168,11 +179,11 @@ h1, h2, h3, h4, h5 {
 
 /*border: tiene que tener 3 calores MEDIDA-TIPO DE BORDE-COLOR */
 
-
+/*
 img{
     border: 8px solid #A760FF;
     margin-top: 15px;
-}
+}*/
 
 
 
@@ -205,7 +216,7 @@ las class se llaman por un . (punto)
 font weight: bold es para ponerlo en negrita
 */
 
-
+/*
 .divfotoPrincipal {
     display: flex;
     justify-content: center;
@@ -243,21 +254,21 @@ h5 {
 
 
 
-.preguntasFrecuentes div {
+.accordion-button:enabled{
     background-color: #4C0070;
-
-    text-align: center;
-    font-size: 2em;
     color: white;
-    border: 2px solid white;
-    margin-left: 3px;
-    margin-right: 3px;
+    text-decoration: none;
+   
 }
 
+
+.accordion-body{
+    background-color: #A760FF;
+}
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 
 .irAlEncabezado {
-    text-align: center;
+    text-align: right;
     margin-top: 25px ;
 }
 
@@ -402,9 +413,6 @@ footer {
     
 
 
-    .grillaMasVendidos{
-        background-image: url(../images/fondoSirena.jpg);
-    }
 
 
     iframe {
@@ -461,13 +469,6 @@ footer {
     justify-items: center;
 }
 
-.styleImgProductos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .divTextoProductos  {
     display: flex;
@@ -515,28 +516,23 @@ footer{
     grid-area: footer;
 }
 
-
-.gridProductos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 15px;
-    justify-items: center;
-}
-
-.styleImgProductos{
+.card{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background-color:#E8A0BF!important;
+    border: none!important;
+}
+.card-body p{
+text-align: center;
 }
 
+.card-body button{
+text-align: center;}
 
-.gridProductos img {
-width: 55%;
+
+.card-img-top{
+    border: #4C0070 1px solid;
 }
-
-
 @media (min-width:768px){
 
     .gridProductos{
@@ -571,7 +567,17 @@ width: 55%;
 
 }
 
+.buttonProductos{
+    background-color: black;
+}
 
+.card-title{
+    background-color:#A760FF ;
+}
+
+.card-img-top{
+    border: none;
+}
 
 
 /*----------------------------------------------------------------GALERIA---------------*/
@@ -640,7 +646,6 @@ width: 55%;
     }
 
 }
-
 
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
@@ -748,8 +753,6 @@ text-align: center;    color: white;
     grid-area: form;
     color: white;
 }
-
-
 
 
 
@@ -1220,5 +1223,3 @@ text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     }
-
-
