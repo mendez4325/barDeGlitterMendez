@@ -1,0 +1,52 @@
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem!important;
+    color: $colorNav!important;
+
+    a {
+        color: $colorNav;
+    }
+}
+
+
+
+
+header{
+    padding: 0;
+    margin: 0;
+}
+.menu-bar{
+    background: linear-gradient(-90deg, rgba(232,160,191,1) 14%, rgba(167,96,255,1) 100%);}
+
+.nav-link{
+    font-size: 30px;
+    margin: 3px;
+    color: $colorNav!important;
+    font-weight: 500;
+    &:hover{
+        font-weight: 600;
+        border-bottom: 1px solid white;
+        border-bottom: none;
+        }
+    }
+
+    @media (min-width: 1024px){
+        .nav-link:hover{
+            border-bottom: white 1px solid;
+        }
+    }
+
+
+.menu-bar .navbar-toggler {
+    outline: none!important;
+    border: none!important;
+}
+
+.navbar .fa{
+    color: white;
+    font-size: 26px;
+}
+
+.collapsed {
+    border: none!important;
+} 
