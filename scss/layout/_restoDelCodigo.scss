@@ -17,35 +17,14 @@ font-family: 'Staatliches', cursive;
     padding: 0;
 }
 
-/*se genera el reset para que se vea igual la pagina en todos los navegadores*/
+
+
 
 /***************MOBILE FIRST*******************/
 
 
 
-.titulo p{
-    font-size: 2rem;
-    color: white;
-}
 
-.styleBody{
-    font-family: 'Oswald', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    font-family: 'Oswald', sans-serif;
-    font-weight: bolder;
-    background-color: #E8A0BF;
-}
-
-
-.styleTitulos{
-    color: white;
-    font-family: 'Staatliches', cursive;
-    font-weight: bolder;
-}
 
 /*---------------------------------------GRID AREA*/
 
@@ -95,31 +74,11 @@ aside{
 
 footer{
     grid-area: footer;
-    background-image: url(../images/fondoSirena.jpg);
 
 }
 
 
-.masVendidos{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    gap: 15px;
-    justify-items: center;
-}
 
-
-
-
-.slide img {
-    height: 50vh;
-    
-}
-
-.accordion-item{
-    font-family: 'Staatliches', cursive;
-    color: white;
-}
 
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
@@ -135,69 +94,7 @@ h1, h2, h3, h4, h5 {
     background-color: #A760FF;
 }
 
-/*border: tiene que tener 3 calores MEDIDA-TIPO DE BORDE-COLOR */
 
-/*
-img{
-    border: 8px solid #A760FF;
-    margin-top: 15px;
-}*/
-
-
-
-.masVendidos {
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    gap: 10px;
-
-    color: white;
-    font-weight: bold;
-}
-
-
-.styleImgMasVendidos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.masVendidos img {
-    width: 45%;
-}
-
-
-/*
-las class se llaman por un . (punto)
-font weight: bold es para ponerlo en negrita
-*/
-
-/*
-.divfotoPrincipal {
-    display: flex;
-    justify-content: center;
-}
-
-.styleFotoPrincipal{
-    width: 55%;
-    height: 10%;
-    margin: 0 3px 0 3px ;
-
-}
-/*los id sirven para destacar solo 1. No es repetible */
-
-.divTutorial{
-    display: flex;
-    justify-content: center;
-}
-
-
-
-iframe {
-    width: 70%;
-}
 
 
 /*------------------------------------------------------------------------------------------ARTICLE----------*/
@@ -212,17 +109,6 @@ h5 {
 
 
 
-.accordion-button:enabled{
-    background-color: #4C0070;
-    color: white;
-    text-decoration: none;
-   
-}
-
-
-.accordion-body{
-    background-color: #A760FF;
-}
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 
 .irAlEncabezado {
@@ -245,177 +131,6 @@ aside .irAlEncabezado a{
 
 
 
-footer {
-    background-color: #E8A0BF;
-    padding: 25px;
-    margin: 0 1px 0 1px;
-}
-
-
-
-
-.redesSociales {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    font-family: 'Staatliches', cursive;
-    text-align: center;
-}
-
-
-
-.redesSociales li {
-    padding: 10px;
-    border: 5px double white;
-    background-image: url(../images/fondoSirena.jpg);
-
-
-}
-
-
-.redesSociales li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
-
-@media (min-width:768px) {
-
-    .masVendidos{
-        padding: 1.5em;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        margin: 0;
-    }
-
-
-    .barraNav {
-        justify-content: space-between;
-    }
-
-
-    .barraNav li a {
-        font-size: 1.8em;
-    }
-    
-
-    h5 {
-        text-align: right;
-    }
-    
-
-    .preguntasFrecuentes div {
-        text-align: right;
-    }
-
-
-    .irAlEncabezado {
-        text-align: center;
-    }
-    
-
-    .redesSociales {
-        justify-content: space-evenly;
-    }
-
-    .masVendidos img {
-        width: 60%;
-    }
-}
-
-
-
-@media (min-width:1024px) {
-
-    .masVendidos{
-        padding: 1.5em;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        height: auto;
-        margin: 0;
-    }
-
-    body {
-        background-image: none;
-        background-color: #E8A0BF;
-    }
-
-
-    header{
-        border: 5px solid white;
-    }
-
-    .titulo p{ 
-        color: white
-    
-    }
-
-    .barraNav {
-        justify-content: space-evenly;
-    }
-
-
-    .barraNav li a {
-        font-size: 2.3em;
-    }
-    
-
-    h5 {
-        text-align: left;
-    }
-    
-
-
-
-
-    iframe {
-        width: 850px;
-        height: 600px;
-    }
-
-
-    .preguntasFrecuentes div {
-        text-align: left;
-    }
-
-
-    .irAlEncabezado {
-        text-align: right;
-    }
-    
-
-    .redesSociales {
-        justify-content: space-evenly;
-    }
-
-
-    .redesSociales li a {
-        font-size: 2.5em;
-    }
-
-    h6{
-        font-size: 2.5em;
-        margin-bottom: 20px;
-    }
-
-    footer {
-        padding: 25px;
-        background-image: url(../images/fondoSirena.jpg);
-        border: none;
-        margin: 0
-    }
-
-.styleBody{
-    background-image: none;
-    background-color: #E8A0BF;
-
-}
-}
 
 /***************************************************--PRODUCTOS-*/
 

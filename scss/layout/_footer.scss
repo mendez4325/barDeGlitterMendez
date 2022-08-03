@@ -1,0 +1,23 @@
+footer {
+    background-color: #E8A0BF;
+    padding: 25px;
+    margin: 0 1px 0 1px;
+}
+@media (min-width:768px) {
+
+    footer{
+        background-image: url(../images/fondoSirena.jpg);
+    }
+
+}
+
+@media (min-width:1024px) {
+    
+    footer {
+        padding: 25px;
+        border: none;
+        margin: 0
+    }
+
+}
+

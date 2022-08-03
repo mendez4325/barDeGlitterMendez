@@ -1,0 +1,184 @@
+.titulo p{
+    font-size: 2rem;
+    color: white;
+}
+
+.styleBody{
+    font-family: $fontGeneral;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    background-image: url(../images/fondoSirena.jpg);
+}
+
+
+
+.styleTitulos{
+    color: white;
+    font-family: $fontTitulos;
+    font-weight: bolder;
+}
+
+.masVendidos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    justify-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.styleImgMasVendidos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.masVendidos img {
+    width: 45%;
+}
+
+.slide img {
+    height: 50vh;
+    
+}
+
+
+
+.divTutorial{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+iframe {
+    width: 70%;
+}
+
+
+.accordion-button:enabled{
+    background-color: #4C0070;
+    color: white;
+    text-decoration: none;
+}
+
+
+.accordion-body{
+    background-color: #A760FF;
+}
+
+
+.accordion-item{
+    font-family: 'Staatliches', cursive;
+    color: white;
+}
+
+
+/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
+
+@media (min-width:768px) {
+
+    .styleBody{
+        background-image: none;
+        background-color: #E8A0BF;
+    }
+
+    .masVendidos{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin: 0;
+    }
+
+
+    .irAlEncabezado {
+        text-align: center;
+    }
+    
+
+    .masVendidos img {
+        width: 60%;
+    }
+}
+
+
+
+@media (min-width:1024px) {
+
+    .masVendidos{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: auto;
+        margin: 0;
+    }
+
+
+    header{
+        border: 5px solid white;
+    }
+
+    .titulo p{ 
+        color: white
+    
+    }
+
+    .barraNav {
+        justify-content: space-evenly;
+    }
+
+
+    .barraNav li a {
+        font-size: 2.3em;
+    }
+    
+
+    h5 {
+        text-align: left;
+    }
+    
+
+
+
+
+    iframe {
+        width: 850px;
+        height: 600px;
+    }
+
+
+    .preguntasFrecuentes div {
+        text-align: left;
+    }
+
+
+    .irAlEncabezado {
+        text-align: right;
+    }
+    
+
+
+
+    h6{
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    
+
+.styleBody{
+    background-image: none;
+    background-color: #E8A0BF;
+
+}
+}
