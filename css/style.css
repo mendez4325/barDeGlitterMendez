@@ -218,14 +218,6 @@ h1, h2, h3, h4, h5 {
   margin: 20px 0px 20px 0px;
   background-color: #A760FF; }
 
-/*------------------------------------------------------------------------------------------ARTICLE----------*/
-h5 {
-  text-align: center;
-  border-radius: 0;
-  background-color: #4C0070;
-  margin-left: 3px;
-  margin-right: 3px; }
-
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 .irAlEncabezado {
   text-align: right;

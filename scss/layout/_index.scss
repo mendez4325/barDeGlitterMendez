@@ -1,6 +1,8 @@
-.titulo p{
-    font-size: 2rem;
-    color: white;
+.titulo{
+    p{
+        font-size: 2rem;
+        color: white;
+    }
 }
 
 .styleBody{
@@ -32,6 +34,9 @@
     gap: 10px;
     color: white;
     font-weight: bold;
+    img {
+        width: 45%;
+    }
 }
 
 
@@ -42,20 +47,18 @@
     align-items: center;
 }
 
-.masVendidos img {
-    width: 45%;
-}
 
-.slide img {
-    height: 50vh;
-    
+.slide{
+    img {
+        height: 50vh;
+        
+    }
 }
 
 
 
 .divTutorial{
-    display: flex;
-    justify-content: center;
+    @include flex-center
 }
 
 
@@ -65,21 +68,17 @@ iframe {
 }
 
 
-.accordion-button:enabled{
-    background-color: #4C0070;
-    color: white;
-    text-decoration: none;
+.accordion-button{
+    &:enabled{
+        background-color: $color-violet;
+        color: $color-white;
+        text-decoration: none;
+    }
 }
 
 
 .accordion-body{
-    background-color: #A760FF;
-}
-
-
-.accordion-item{
-    font-family: 'Staatliches', cursive;
-    color: white;
+    background-color: $color-violet-light;
 }
 
 
@@ -87,27 +86,27 @@ iframe {
 
 @media (min-width:768px) {
 
-    .styleBody{
-        background-image: none;
-        background-color: #E8A0BF;
-    }
-
     .masVendidos{
         padding: 1.5em;
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
+
+        img {
+            width: 60%;
+        }
     }
 
-
-    .irAlEncabezado {
-        text-align: center;
-    }
     
 
-    .masVendidos img {
-        width: 60%;
+    
+
+    .preguntasFrecuentes{
+        
+        div {
+            text-align: right;
+        }
     }
 }
 
@@ -123,31 +122,22 @@ iframe {
         margin: 0;
     }
 
+    body {
+        background-image: none;
+        background-color: #E8A0BF;
+    }
+
 
     header{
-        border: 5px solid white;
+        border: 5px solid $color-white;
     }
 
-    .titulo p{ 
-        color: white
-    
+    .titulo {
+        p{ 
+            color: $color-white
+        
+        }
     }
-
-    .barraNav {
-        justify-content: space-evenly;
-    }
-
-
-    .barraNav li a {
-        font-size: 2.3em;
-    }
-    
-
-    h5 {
-        text-align: left;
-    }
-    
-
 
 
 
@@ -157,16 +147,17 @@ iframe {
     }
 
 
-    .preguntasFrecuentes div {
-        text-align: left;
+    .preguntasFrecuentes {
+        div {
+            text-align: left;
+        }
     }
 
 
     .irAlEncabezado {
-        text-align: right;
+        display: flex;
+        align-self: right;
     }
-    
-
 
 
     h6{
@@ -174,11 +165,16 @@ iframe {
         margin-bottom: 20px;
     }
 
-    
+    footer {
+        padding: 25px;
+        background-image: url(../images/fondoSirena.jpg);
+        border: none;
+        margin: 0
+    }
 
 .styleBody{
     background-image: none;
-    background-color: #E8A0BF;
+    background-color: $color-pink;
 
 }
 }

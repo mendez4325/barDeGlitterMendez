@@ -1,4 +1,11 @@
-$colorNav: white;
+$color-white: white;
+$color-black: black;
+$color-violet: #4C0070;
+$color-violet-light: #A760FF;
+$color-pink: #E8A0BF;
 
-$fontGeneral: 'Oswald', sans-serif;
-$fontTitulos: 'Staatliches', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap'); /*llamado a las tipografias por css*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+$ff-headings: 'Staatliches', cursive;
+$ff-body: 'Oswald', sans-serif;

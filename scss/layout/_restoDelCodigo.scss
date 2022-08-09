@@ -1,26 +1,9 @@
 /*
-****PALETA DE COLORES****
-#E8A0BF
-#A760FF
-#4C0070
-
 ****MIS FUENTES****
 font-family: 'Oswald', sans-serif;
 font-family: 'Staatliches', cursive;
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap'); /*llamado a las tipografias por css*/
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
-/***************MOBILE FIRST*******************/
 
 
 
@@ -74,59 +57,63 @@ aside{
 
 footer{
     grid-area: footer;
+    background-image: url(../images/fondoSirena.jpg);
 
 }
 
 
+.slide {
+    img {
+        height: 50vh;
+        
+    }    
+}
 
+
+.accordion-item{
+    font-family: $ff-headings;
+    color: $color-white;
+}
 
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
 
 h1, h2, h3, h4, h5 {
-    color: white;
+    color: $color-white;
     font-size: 2.5em;
     padding: 25px;
     text-align: center;
-    border: 3px white solid;
+    border: 3px $color-white solid;
     border-radius: 75px;
     margin: 20px 0px 20px 0px;
-    background-color: #A760FF;
+    background-color: $color-violet-light;
 }
 
 
 
-
-/*------------------------------------------------------------------------------------------ARTICLE----------*/
-
-h5 {
-    text-align: center;
-    border-radius: 0;
-    background-color: #4C0070;
-    margin-left: 3px;
-    margin-right: 3px;
-}
 
 
 
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 
 .irAlEncabezado {
-    text-align: right;
+    display: flex;
+    align-self: center;
     margin-top: 25px ;
+
+    a{
+        font-size: 2em ;
+        text-decoration: none;
+        list-style: none;
+        color: $color-white;
+    }
 }
 
 
-aside .irAlEncabezado a{
-    font-size: 2em ;
-    text-decoration: none;
-    list-style: none;
-    color: white;
-}
 
 
 
-/*----------------------------------------------------------------------------------FOOTER----------*/  
+/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 
 
 
@@ -144,22 +131,21 @@ aside .irAlEncabezado a{
 
 
 .divTextoProductos  {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #A760FF;
-    border: 3px solid white;
+    background-color: $color-violet-light;
+    border: 3px solid $color-white;
     height: 200px;
     width: 300px;
 }
 
-.divTextoProductos p{
-    color: white;
-    font-size: 1.5em;
-    
+.divTextoProductos{
+    p{
+        color: $color-white;
+        font-size: 1.5em;
+        
+    }    
 }
-
 
 .grillaGeneralProductos{
     display: grid;
@@ -190,22 +176,17 @@ footer{
 }
 
 .card{
-    display: flex;
-    justify-content: center;
-    background-color:#E8A0BF!important;
+    @include flex-center;
+    background-color: $color-pink!important;
     border: none!important;
 }
-.card-body p{
-text-align: center;
+.card-body{
+    p & button{
+        text-align: center;
+    }
 }
 
-.card-body button{
-text-align: center;}
 
-
-.card-img-top{
-    border: #4C0070 1px solid;
-}
 @media (min-width:768px){
 
     .gridProductos{
@@ -214,11 +195,11 @@ text-align: center;}
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
-    }
 
-    .gridProductos img{
-        width: 75%;
-        height: 85%;
+        img{
+            width: 75%;
+            height: 85%;
+        }
     }
 }
 
@@ -227,12 +208,14 @@ text-align: center;}
 
     .gridProductos{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        img{
+            width: 90%;
+            height: 90%;
+        }
     }
 
-    .gridProductos img{
-        width: 90%;
-        height: 90%;
-    }
+    
 
     .gridMensajes{
         grid-template-columns: repeat(3,1fr);
@@ -241,11 +224,11 @@ text-align: center;}
 }
 
 .buttonProductos{
-    background-color: black;
+    background-color: $color-black;
 }
 
 .card-title{
-    background-color:#A760FF ;
+    background-color: $color-violet-light ;
 }
 
 .card-img-top{
@@ -276,20 +259,19 @@ text-align: center;}
     grid-template-rows: 1fr;
     gap: 15px;
     justify-items: center;
+
+    img {
+        width: 55%;
+        }
 }
 
 
 .styleImgGaleria{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    @include flex-center;
+    flex-direction: column;
+}
 
 
-.gridGaleria img {
-    width: 55%;
-    }
 
 
 @media (min-width:768px){
@@ -300,11 +282,13 @@ text-align: center;}
         grid-template-columns: 1fr 1fr;
         height: auto;
         margin: 0;
+
+        img{
+            width: 75%;
+        }
     }
 
-    .gridGaleria img{
-        width: 75%;
-    }
+    
 }
 
 
@@ -312,12 +296,11 @@ text-align: center;}
 
     .gridGaleria{
     grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .gridGaleria img{
+    
+    img{
         width: 90%;
     }
-
+    }
 }
 
 
@@ -340,74 +323,73 @@ text-align: center;}
 .divSobreNosotros{
     grid-area: parrafos;
 
+    p{
+        text-align: center;
+        color: $color-white;
+    }
 }
 
 .divImgSobreNosotros{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
     grid-area: imagenes;
+
+    img {
+        justify-self: center;
+        width: 50%;
+        height: 50%;
+    }
 }
 
 .styleImgSobreNosotros{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.divSobreNosotros p{
-    text-align: center;
-    color: white;
-}
 
-.divImgSobreNosotros img {
-    justify-self: center;
-    width: 50%;
-    height: 50%;
-    
-}
+
+
 
 @media (min-width:768px){
 
-    .divImgSobreNosotros img{
-        width: 60%;
+    .divImgSobreNosotros {
+        img{
+            width: 60%;
+        }
     }
 }
 
 
 @media (min-width:1024px){
 
-    .divImgSobreNosotros img{
-        width: 40%;
+    .divImgSobreNosotros {
+        img{
+            width: 40%;
+        }
     }
 
 }
 /*------------------------------------------CONTACTO-----------------S*/
 
 .sectionContactos{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    
 }
 
 
 .divContacto {
-text-align: center;    color: white;
-    background-color: #A760FF;
+    text-align: center;    
+    color: $color-white;
+    background-color: $color-violet-light;
     font-weight: bold;
     font-size: 20px;
-    border: 3px solid white;
+    border: 3px solid $color-white;
     padding: 30px;
     margin: 15px 10px 0 10px;
 }
 
 .grillaGeneralContactos{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     gap: 20px;
     grid-template-areas: 
                         "header"
@@ -422,34 +404,13 @@ text-align: center;    color: white;
     grid-area: sectionContactos;
 }
 
-.form{
+.divForm{
     grid-area: form;
-    color: white;
 }
 
-
-
-/*.flex-container { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #E8A0BF;
-    padding: 30px;
-    height: 250px;
+.form{
+    color: $color-white;
 }
-
-
-.flex-container div {
-    background-color: #A760FF;
-    padding: 20px;
-    margin: 10px;
-}*/
-
-
-/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
-
 
 
 /*******************ANIMACIONES*****************/
