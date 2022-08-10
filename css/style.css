@@ -1,44 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-.navbar-brand {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem !important;
-  color: white !important; }
-  .navbar-brand a {
-    color: white; }
-
-header {
+* {
+  margin: 0;
   padding: 0;
-  margin: 0; }
+  box-sizing: border-box; }
 
-.menu-bar {
-  background: linear-gradient(-90deg, #e8a0bf 14%, #a760ff 100%); }
-
-.nav-link {
-  font-size: 30px;
-  margin: 3px;
-  color: white !important;
-  font-weight: 500; }
-  .nav-link:hover {
-    font-weight: 600;
-    border-bottom: 1px solid #a760ff;
-    border-bottom: none; }
-
-@media (min-width: 1024px) {
-  .nav-link:hover {
-    border-bottom: white 1px solid; } }
-
-.menu-bar .navbar-toggler {
-  outline: none !important;
-  border: none !important; }
-
-.navbar .fa {
-  color: white;
-  font-size: 26px; }
-
-.collapsed {
-  border: none !important; }
-
+/*llamado a las tipografias por css*/
 .titulo p {
   font-size: 2rem;
   color: white; }
@@ -67,6 +34,8 @@ header {
   gap: 10px;
   color: white;
   font-weight: bold; }
+  .masVendidos img {
+    width: 45%; }
 
 .styleImgMasVendidos {
   display: flex;
@@ -74,15 +43,13 @@ header {
   justify-content: center;
   align-items: center; }
 
-.masVendidos img {
-  width: 45%; }
-
 .slide img {
   height: 50vh; }
 
 .divTutorial {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 iframe {
   width: 70%; }
@@ -95,25 +62,26 @@ iframe {
 .accordion-body {
   background-color: #A760FF; }
 
-.accordion-item {
-  font-family: 'Staatliches', cursive;
-  color: white; }
+footer {
+  background-color: #E8A0BF;
+  background-image: none; }
 
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 @media (min-width: 768px) {
-  .styleBody {
-    background-image: none;
-    background-color: #E8A0BF; }
   .masVendidos {
     padding: 1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .irAlEncabezado {
-    text-align: center; }
-  .masVendidos img {
-    width: 60%; } }
+    .masVendidos img {
+      width: 60%; }
+  footer {
+    padding: 25px;
+    border: none;
+    margin: 0; }
+  .preguntasFrecuentes div {
+    text-align: right; } }
 
 @media (min-width: 1024px) {
   .masVendidos {
@@ -122,61 +90,35 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr;
     height: auto;
     margin: 0; }
+  body {
+    background-image: none;
+    background-color: #E8A0BF; }
   header {
     border: 5px solid white; }
   .titulo p {
     color: white; }
-  .barraNav {
-    justify-content: space-evenly; }
-  .barraNav li a {
-    font-size: 2.3em; }
-  h5 {
-    text-align: left; }
   iframe {
     width: 850px;
     height: 600px; }
   .preguntasFrecuentes div {
     text-align: left; }
   .irAlEncabezado {
-    text-align: right; }
+    display: flex;
+    align-self: right; }
   h6 {
     font-size: 2.5em;
     margin-bottom: 20px; }
   .styleBody {
     background-image: none;
-    background-color: #E8A0BF; } }
-
-footer {
-  background-color: #E8A0BF;
-  padding: 25px;
-  margin: 0 1px 0 1px; }
-
-@media (min-width: 768px) {
+    background-color: #E8A0BF; }
   footer {
     background-image: url(../images/fondoSirena.jpg); } }
 
-@media (min-width: 1024px) {
-  footer {
-    padding: 25px;
-    border: none;
-    margin: 0; } }
-
 /*
-****PALETA DE COLORES****
-#E8A0BF
-#A760FF
-#4C0070
-
 ****MIS FUENTES****
 font-family: 'Oswald', sans-serif;
 font-family: 'Staatliches', cursive;
 */
-/*llamado a las tipografias por css*/
-* {
-  margin: 0;
-  padding: 0; }
-
-/***************MOBILE FIRST*******************/
 /*---------------------------------------GRID AREA*/
 .grillaGeneral {
   display: grid;
@@ -207,6 +149,13 @@ aside {
 footer {
   grid-area: footer; }
 
+.slide img {
+  height: 50vh; }
+
+.accordion-item {
+  font-family: "Staatliches", cursive;
+  color: white; }
+
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
 h1, h2, h3, h4, h5 {
   color: white;
@@ -220,16 +169,16 @@ h1, h2, h3, h4, h5 {
 
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 .irAlEncabezado {
-  text-align: right;
+  display: flex;
+  align-self: center;
   margin-top: 25px; }
+  .irAlEncabezado a {
+    font-size: 2em;
+    text-decoration: none;
+    list-style: none;
+    color: white; }
 
-aside .irAlEncabezado a {
-  font-size: 2em;
-  text-decoration: none;
-  list-style: none;
-  color: white; }
-
-/*----------------------------------------------------------------------------------FOOTER----------*/
+/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 /***************************************************--PRODUCTOS-*/
 .gridMensajes {
   display: grid;
@@ -240,9 +189,9 @@ aside .irAlEncabezado a {
 
 .divTextoProductos {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #A760FF;
   border: 3px solid white;
   height: 200px;
@@ -272,17 +221,12 @@ footer {
 .card {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #E8A0BF !important;
   border: none !important; }
 
-.card-body p {
+p .card-body button {
   text-align: center; }
-
-.card-body button {
-  text-align: center; }
-
-.card-img-top {
-  border: #4C0070 1px solid; }
 
 @media (min-width: 768px) {
   .gridProductos {
@@ -291,16 +235,16 @@ footer {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .gridProductos img {
-    width: 75%;
-    height: 85%; } }
+    .gridProductos img {
+      width: 75%;
+      height: 85%; } }
 
 @media (min-width: 1024px) {
   .gridProductos {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .gridProductos img {
-    width: 90%;
-    height: 90%; }
+    .gridProductos img {
+      width: 90%;
+      height: 90%; }
   .gridMensajes {
     grid-template-columns: repeat(3, 1fr); } }
 
@@ -328,15 +272,14 @@ footer {
   grid-template-rows: 1fr;
   gap: 15px;
   justify-items: center; }
+  .gridGaleria img {
+    width: 55%; }
 
 .styleImgGaleria {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
-
-.gridGaleria img {
-  width: 55%; }
+  align-items: center;
+  flex-direction: column; }
 
 @media (min-width: 768px) {
   .gridGaleria {
@@ -345,14 +288,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0; }
-  .gridGaleria img {
-    width: 75%; } }
+    .gridGaleria img {
+      width: 75%; } }
 
 @media (min-width: 1024px) {
   .gridGaleria {
     grid-template-columns: 1fr 1fr 1fr; }
-  .gridGaleria img {
-    width: 90%; } }
+    .gridGaleria img {
+      width: 90%; } }
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 .grillaGeneralSobreNosotros {
@@ -364,28 +307,26 @@ footer {
 
 .divSobreNosotros {
   grid-area: parrafos; }
+  .divSobreNosotros p {
+    text-align: center;
+    color: white; }
 
 .divImgSobreNosotros {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   grid-area: imagenes; }
+  .divImgSobreNosotros img {
+    justify-self: center;
+    width: 50%;
+    height: 50%; }
 
 .styleImgSobreNosotros {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
-
-.divSobreNosotros p {
-  text-align: center;
-  color: white; }
-
-.divImgSobreNosotros img {
-  justify-self: center;
-  width: 50%;
-  height: 50%; }
+  align-items: center;
+  flex-direction: column; }
 
 @media (min-width: 768px) {
   .divImgSobreNosotros img {
@@ -398,8 +339,9 @@ footer {
 /*------------------------------------------CONTACTO-----------------S*/
 .sectionContactos {
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .divContacto {
   text-align: center;
@@ -413,36 +355,18 @@ footer {
 
 .grillaGeneralContactos {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   gap: 20px;
   grid-template-areas: "header" "sectionContactos" "form" "aside" "footer"; }
 
 .sectionContactos {
   grid-area: sectionContactos; }
 
+.divForm {
+  grid-area: form; }
+
 .form {
-  grid-area: form;
   color: white; }
 
-/*.flex-container { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #E8A0BF;
-    padding: 30px;
-    height: 250px;
-}
-
-
-.flex-container div {
-    background-color: #A760FF;
-    padding: 20px;
-    margin: 10px;
-}*/
-/*CON LA CONSOLA SE PUEDE VER MAS CLARO los diferentes tipos de flex-direction*/
 /*******************ANIMACIONES*****************/
 /*HEADER*/
 .animation-Flicker:hover {
@@ -762,3 +686,41 @@ footer {
   -webkit-box-shadow: 0px 0px 15px 15px white;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg); }
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem !important;
+  color: white !important; }
+  .navbar-brand a {
+    color: white; }
+
+header {
+  padding: 0;
+  margin: 0; }
+
+.menu-bar {
+  background: linear-gradient(-90deg, #e8a0bf 14%, #a760ff 100%); }
+  .menu-bar .navbar-toggler {
+    outline: none !important;
+    border: none !important; }
+
+.nav-link {
+  font-size: 30px;
+  margin: 3px;
+  color: white !important;
+  font-weight: 500; }
+  .nav-link:hover {
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    border-bottom: none; }
+
+@media (min-width: 1024px) {
+  .nav-link:hover {
+    border-bottom: white 1px solid; } }
+
+.navbar .fa {
+  color: white;
+  font-size: 26px; }
+
+.collapsed {
+  border: none !important; }

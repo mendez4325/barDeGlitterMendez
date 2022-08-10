@@ -7,11 +7,7 @@ font-family: 'Staatliches', cursive;
 
 
 
-
-
 /*---------------------------------------GRID AREA*/
-
-
 .grillaGeneral{
     display: grid;
     gap: 20px;
@@ -24,40 +20,31 @@ font-family: 'Staatliches', cursive;
                         "preguntas"
                         "aside"
                         "footer";
-
 }
-
 header{
     grid-area: header;
 }
-
 .titulo{
     grid-area: titulo;
 }
-
 .divCarousel{
     grid-area: carousel;
 }
-
 .grillaMasVendidos{
     grid-area: masVendidos;
 }
-
 .divTutorial{
     grid-area: tutorial;
 }
-
 .preguntasFrecuentes{
     grid-area: preguntas;
 }
-
 aside{
     grid-area: aside;
 }
 
 footer{
     grid-area: footer;
-    background-image: url(../images/fondoSirena.jpg);
 
 }
 
@@ -65,7 +52,7 @@ footer{
 .slide {
     img {
         height: 50vh;
-        
+
     }    
 }
 
@@ -117,10 +104,7 @@ h1, h2, h3, h4, h5 {
 
 
 
-
-
 /***************************************************--PRODUCTOS-*/
-
 .gridMensajes{
     display: grid;
     grid-template-columns: 1fr;
@@ -143,7 +127,7 @@ h1, h2, h3, h4, h5 {
     p{
         color: $color-white;
         font-size: 1.5em;
-        
+
     }    
 }
 
@@ -157,20 +141,15 @@ h1, h2, h3, h4, h5 {
                         "aside"
                         "footer";
 }
-
 header{
     grid-area: header;
 }
-
-
 .grillaProductos{
     grid-area: grillaProductos;
 }
-
 .grillaMensajes{
     grid-area: grillaMensajes;
 }
-
 footer{
     grid-area: footer;
 }
@@ -203,7 +182,6 @@ footer{
     }
 }
 
-
 @media (min-width:1024px){
 
     .gridProductos{
@@ -215,7 +193,7 @@ footer{
         }
     }
 
-    
+
 
     .gridMensajes{
         grid-template-columns: repeat(3,1fr);
@@ -234,10 +212,7 @@ footer{
 .card-img-top{
     border: none;
 }
-
-
 /*----------------------------------------------------------------GALERIA---------------*/
-
 .grillaGeneralGaleria{
     display: grid;
     gap: 20px;
@@ -247,12 +222,9 @@ footer{
                         "aside"
                         "footer";
 }
-
 .grillaGaleria{
     grid-area: grillaGaleria;
 }
-
-
 .gridGaleria{
     display: grid;
     grid-template-columns: 1fr;
@@ -275,7 +247,6 @@ footer{
 
 
 @media (min-width:768px){
-
     .gridGaleria{
         padding: 1.5em;
         display: grid;
@@ -288,7 +259,7 @@ footer{
         }
     }
 
-    
+
 }
 
 
@@ -296,7 +267,7 @@ footer{
 
     .gridGaleria{
     grid-template-columns: 1fr 1fr 1fr;
-    
+
     img{
         width: 90%;
     }
@@ -305,8 +276,6 @@ footer{
 
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
-
-
 .grillaGeneralSobreNosotros{
     display: grid;
     gap: 20px;
@@ -319,7 +288,6 @@ footer{
                         "aside"
                         "footer";
 }
-
 .divSobreNosotros{
     grid-area: parrafos;
 
@@ -398,8 +366,6 @@ footer{
                         "aside"
                         "footer";
 }
-
-
 .sectionContactos{
     grid-area: sectionContactos;
 }

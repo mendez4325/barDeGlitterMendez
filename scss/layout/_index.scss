@@ -6,25 +6,20 @@
 }
 
 .styleBody{
-    font-family: $fontGeneral;
+    font-family: $ff-body;
     height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
     background-image: url(../images/fondoSirena.jpg);
 }
-
-
-
 .styleTitulos{
     color: white;
-    font-family: $fontTitulos;
+    font-family: $ff-headings;
     font-weight: bolder;
 }
-
 .masVendidos{
     display: grid;
     grid-template-columns: 1fr;
@@ -51,7 +46,7 @@
 .slide{
     img {
         height: 50vh;
-        
+
     }
 }
 
@@ -60,7 +55,6 @@
 .divTutorial{
     @include flex-center
 }
-
 
 
 iframe {
@@ -81,7 +75,10 @@ iframe {
     background-color: $color-violet-light;
 }
 
-
+footer{
+    background-color: $color-pink;
+    background-image: none;
+}
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 
 @media (min-width:768px) {
@@ -98,22 +95,23 @@ iframe {
         }
     }
 
-    
 
-    
+    footer {
+        padding: 25px;
+        border: none;
+        margin: 0
+    }
+
 
     .preguntasFrecuentes{
-        
+
         div {
             text-align: right;
         }
     }
 }
 
-
-
 @media (min-width:1024px) {
-
     .masVendidos{
         padding: 1.5em;
         display: grid;
@@ -135,7 +133,7 @@ iframe {
     .titulo {
         p{ 
             color: $color-white
-        
+
         }
     }
 
@@ -165,16 +163,12 @@ iframe {
         margin-bottom: 20px;
     }
 
-    footer {
-        padding: 25px;
-        background-image: url(../images/fondoSirena.jpg);
-        border: none;
-        margin: 0
-    }
 
 .styleBody{
     background-image: none;
     background-color: $color-pink;
 
 }
+footer{
+    background-image: url(../images/fondoSirena.jpg);}
 }
