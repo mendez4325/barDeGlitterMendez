@@ -6,114 +6,6 @@
   box-sizing: border-box; }
 
 /*llamado a las tipografias por css*/
-.titulo p {
-  font-size: 2rem;
-  color: white; }
-
-.styleBody {
-  font-family: "Oswald", sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bolder;
-  background-image: url(../images/fondoSirena.jpg); }
-
-.styleTitulos {
-  color: white;
-  font-family: "Staatliches", cursive;
-  font-weight: bolder; }
-
-.masVendidos {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  justify-items: center;
-  gap: 10px;
-  color: white;
-  font-weight: bold; }
-  .masVendidos img {
-    width: 45%; }
-
-.styleImgMasVendidos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.slide img {
-  height: 50vh; }
-
-.divTutorial {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-iframe {
-  width: 70%; }
-
-.accordion-button:enabled {
-  background-color: #4C0070;
-  color: white;
-  text-decoration: none; }
-
-.accordion-body {
-  background-color: #A760FF; }
-
-footer {
-  background-color: #E8A0BF;
-  background-image: none; }
-
-/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
-@media (min-width: 768px) {
-  .masVendidos {
-    padding: 1.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: auto;
-    margin: 0; }
-    .masVendidos img {
-      width: 60%; }
-  footer {
-    padding: 25px;
-    border: none;
-    margin: 0; }
-  .preguntasFrecuentes div {
-    text-align: right; } }
-
-@media (min-width: 1024px) {
-  .masVendidos {
-    padding: 1.5em;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: auto;
-    margin: 0; }
-  body {
-    background-image: none;
-    background-color: #E8A0BF; }
-  header {
-    border: 5px solid white; }
-  .titulo p {
-    color: white; }
-  iframe {
-    width: 850px;
-    height: 600px; }
-  .preguntasFrecuentes div {
-    text-align: left; }
-  .irAlEncabezado {
-    display: flex;
-    align-self: right; }
-  h6 {
-    font-size: 2.5em;
-    margin-bottom: 20px; }
-  .styleBody {
-    background-image: none;
-    background-color: #E8A0BF; }
-  footer {
-    background-image: url(../images/fondoSirena.jpg); } }
-
 /*
 ****MIS FUENTES****
 font-family: 'Oswald', sans-serif;
@@ -722,5 +614,110 @@ header {
   color: white;
   font-size: 26px; }
 
-.collapsed {
-  border: none !important; }
+.titulo p {
+  font-size: 2rem;
+  color: white; }
+
+.styleBody {
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  background-image: url(../images/fondoSirena.jpg); }
+
+.styleTitulos {
+  color: white;
+  font-family: "Staatliches", cursive;
+  font-weight: bolder; }
+
+.masVendidos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  justify-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold; }
+  .masVendidos img {
+    width: 45%; }
+
+.styleImgMasVendidos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.slide img {
+  height: 50vh; }
+
+.divTutorial {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+iframe {
+  width: 70%; }
+
+.accordion-button:enabled {
+  background-color: #4C0070;
+  color: white;
+  text-decoration: none; }
+
+.accordion-body {
+  background-color: #A760FF; }
+
+footer {
+  background-color: #E8A0BF;
+  background-image: none; }
+
+/**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
+@media (min-width: 768px) {
+  .masVendidos {
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    margin: 0; }
+    .masVendidos img {
+      width: 60%; }
+  footer {
+    padding: 25px;
+    border: none;
+    margin: 0; }
+  .preguntasFrecuentes div {
+    text-align: right; } }
+
+@media (min-width: 1024px) {
+  .masVendidos {
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    margin: 0; }
+  body {
+    background-image: none;
+    background-color: #E8A0BF; }
+  header {
+    border: 5px solid white; }
+  .titulo p {
+    color: white; }
+  iframe {
+    width: 850px;
+    height: 600px; }
+  .preguntasFrecuentes div {
+    text-align: left; }
+  .irAlEncabezado {
+    display: flex;
+    align-self: right; }
+  h6 {
+    font-size: 2.5em;
+    margin-bottom: 20px; }
+  .styleBody {
+    background-image: none;
+    background-color: #E8A0BF; }
+  footer {
+    background-image: url(../images/fondoSirena.jpg); } }
