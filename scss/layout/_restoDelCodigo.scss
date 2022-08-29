@@ -190,12 +190,36 @@ footer{
             width: 100%;
             font-family: 'Oswald', sans-serif;
             button{
-                color: $color-white;
-                width: 100%;
-                padding: 10px;
                 background: $color-violet-light;
-                border: 1px solid $color-white;
+                color: $color-white;
+                font-weight: 350;
+                font-size: 24px;
+                text-transform: uppercase;
+                padding: 16px 36px;
+                border: 2px solid $color-white ;
+                border-radius: 15px;
+                transform: translate(0);
+                overflow: hidden;
+                width: 100%;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background: $color-white;
+                    width: 10px;
+                    top: 0;
+                    bottom: 0;
+                    left: -32px;
+                    transform: rotate(-16deg);
+                    filter: blur(6px);               
+                }
+                &:hover{
+                    &::before{
+                        left: calc(100% + 32px);
+                        transition: 1s;
+                    }
 
+                }
+                
             }
         }
     }
