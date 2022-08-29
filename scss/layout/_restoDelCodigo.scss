@@ -65,7 +65,7 @@ footer{
 
 /*-----------------------------------------------------------------------------------------------MAIN---------*/
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h5 {
     color: $color-white;
     font-size: 2.5em;
     padding: 25px;
@@ -154,14 +154,50 @@ footer{
     grid-area: footer;
 }
 
-.card{
-    @include flex-center;
-    background-color: $color-pink!important;
-    border: none!important;
-}
-.card-body{
-    p & button{
+.gridProductos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    .divProducto{
+        width:275px ;
+        overflow: hidden;
         text-align: center;
+        border: 1px solid $color-white;
+        border-radius: 15px;
+        box-shadow: 0 0 15px $color-violet-light;
+        .product-image{
+            transition: 0.4s;
+            img{
+                width: 100%;
+                &hover{
+                    transform: scale(1.1);
+                }
+
+            }
+        }
+        .product-info{
+            h4{
+                color: $color-white;
+                font-size: 18px;
+                padding: 0 25px;
+                margin-bottom: 10px;
+            }
+        }
+        .button{
+            width: 100%;
+            font-family: 'Oswald', sans-serif;
+            button{
+                color: $color-white;
+                width: 100%;
+                padding: 10px;
+                background: $color-violet-light;
+                border: 1px solid $color-white;
+
+            }
+        }
     }
 }
 
@@ -177,7 +213,6 @@ footer{
 
         img{
             width: 75%;
-            height: 85%;
         }
     }
 }
@@ -189,7 +224,6 @@ footer{
 
         img{
             width: 90%;
-            height: 90%;
         }
     }
 
@@ -201,17 +235,7 @@ footer{
 
 }
 
-.buttonProductos{
-    background-color: $color-black;
-}
 
-.card-title{
-    background-color: $color-violet-light ;
-}
-
-.card-img-top{
-    border: none;
-}
 /*----------------------------------------------------------------GALERIA---------------*/
 .grillaGeneralGaleria{
     display: grid;
