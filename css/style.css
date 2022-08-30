@@ -166,14 +166,6 @@ footer {
           left: calc(100% + 32px);
           transition: 1s; }
 
-.glass-effect {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 32px; }
-
 @media (min-width: 768px) {
   .gridProductos {
     padding: 1.5em;
@@ -238,7 +230,7 @@ footer {
   gap: 20px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "header" "parrafos" "imagenes" "aside" "footer"; }
+  grid-template-areas: "header" "imagenes" "parrafos" "imagenes2" "parrafos2" "aside" "footer"; }
 
 .divSobreNosotros {
   grid-area: parrafos; }
@@ -246,30 +238,50 @@ footer {
     text-align: center;
     color: white; }
 
+.divSegundoSobreNosotros {
+  grid-area: parrafos2; }
+  .divSegundoSobreNosotros p {
+    text-align: center;
+    color: white; }
+
 .divImgSobreNosotros {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   grid-area: imagenes; }
   .divImgSobreNosotros img {
     justify-self: center;
-    width: 50%;
-    height: 50%; }
+    width: 22em;
+    height: 20em; }
 
-.styleImgSobreNosotros {
+.divSegundaImgSobreNosotros {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  grid-area: imagenes2; }
+  .divSegundaImgSobreNosotros img {
+    justify-self: center;
+    width: 22em;
+    height: 20em; }
 
 @media (min-width: 768px) {
   .divImgSobreNosotros img {
-    width: 60%; } }
+    width: 40em;
+    height: 30em; }
+  .divSegundaImgSobreNosotros img {
+    width: 40em;
+    height: 30em; } }
 
 @media (min-width: 1024px) {
+  .grillaGeneralSobreNosotros {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "imagenes parrafos" "parrafos2 imagenes2" "aside aside" "footer footer"; }
   .divImgSobreNosotros img {
-    width: 40%; } }
+    width: 35em;
+    height: 35em; }
+  .divSegundaImgSobreNosotros img {
+    width: 35em;
+    height: 35em; } }
 
 /*------------------------------------------CONTACTO-----------------S*/
 .sectionContactos {

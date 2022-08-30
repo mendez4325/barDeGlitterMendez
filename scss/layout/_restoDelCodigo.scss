@@ -227,15 +227,7 @@ footer{
     }
 }
 
-.glass-effect {
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.1), rgba(255, 255, 255, 0));
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
 
-}
 
 @media (min-width:768px){
 
@@ -342,8 +334,10 @@ footer{
     grid-template-rows: 1fr;
     grid-template-areas: 
                         "header"
-                        "parrafos"
                         "imagenes"
+                        "parrafos"
+                        "imagenes2"
+                        "parrafos2"
                         "aside"
                         "footer";
 }
@@ -356,22 +350,38 @@ footer{
     }
 }
 
+.divSegundoSobreNosotros{
+    grid-area: parrafos2;
+    p{
+        text-align: center;
+        color: $color-white;
+    }
+}
+
 .divImgSobreNosotros{
     @include flex-center;
-    flex-direction: column;
     grid-area: imagenes;
 
     img {
         justify-self: center;
-        width: 50%;
-        height: 50%;
+        width: 22em;
+        height: 20em;
     }
 }
 
-.styleImgSobreNosotros{
+.divSegundaImgSobreNosotros{
     @include flex-center;
-    flex-direction: column;
+
+    img {
+        justify-self: center;
+        width: 22em;
+        height: 20em;
+    }
+    grid-area: imagenes2;
 }
+
+
+
 
 
 
@@ -381,17 +391,42 @@ footer{
 
     .divImgSobreNosotros {
         img{
-            width: 60%;
+            width: 40em;
+            height: 30em;
+        }
+    }
+
+    .divSegundaImgSobreNosotros{
+        img{
+            width: 40em;
+            height: 30em;
         }
     }
 }
 
 
 @media (min-width:1024px){
+    .grillaGeneralSobreNosotros{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+                            "header header"
+                            "imagenes parrafos"
+                            "parrafos2 imagenes2"
+                            "aside aside"
+                            "footer footer";
+    }
 
     .divImgSobreNosotros {
         img{
-            width: 40%;
+            width: 35em;
+            height: 35em
+        }
+    }
+
+    .divSegundaImgSobreNosotros{
+        img{
+            width: 35em;
+            height: 35em
         }
     }
 
