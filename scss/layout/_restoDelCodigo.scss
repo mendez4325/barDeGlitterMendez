@@ -341,7 +341,7 @@ footer{
                         "aside"
                         "footer";
 }
-.divSobreNosotros{
+.divTextoSobreNosotros{
     grid-area: parrafos;
 
     p{
@@ -350,12 +350,9 @@ footer{
     }
 }
 
-.divSegundoSobreNosotros{
+.divSegundoTextoSobreNosotros{
     grid-area: parrafos2;
-    p{
-        text-align: center;
-        color: $color-white;
-    }
+    
 }
 
 .divImgSobreNosotros{
@@ -380,6 +377,15 @@ footer{
     grid-area: imagenes2;
 }
 
+.divdiv{
+    display: flex;
+    height: 75%;
+    align-items: center;
+    p{
+        text-align: center;
+        color: $color-white;
+    }
+}
 
 
 

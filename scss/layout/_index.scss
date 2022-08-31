@@ -13,8 +13,8 @@
     text-align: center;
     font-family: 'Oswald', sans-serif;
     font-weight: bolder;
-    background-image: url(../images/fondoSirena.jpg);
-}
+    background-image: none;
+    background-color: $color-pink;}
 .styleTitulos{
     color: white;
     font-family: $ff-headings;
@@ -75,10 +75,11 @@ iframe {
     background-color: $color-violet-light;
 }
 
-footer{
-    background-color: $color-pink;
-    background-image: none;
+.irAlEncabezado{
+    justify-content: center;
 }
+footer{
+    background-image: url(../images/fondoSirena.jpg);}
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 
 @media (min-width:768px) {
@@ -169,6 +170,6 @@ footer{
     background-color: $color-pink;
 
 }
-footer{
-    background-image: url(../images/fondoSirena.jpg);}
+
+
 }

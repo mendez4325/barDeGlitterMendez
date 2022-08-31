@@ -232,17 +232,14 @@ footer {
   grid-template-rows: 1fr;
   grid-template-areas: "header" "imagenes" "parrafos" "imagenes2" "parrafos2" "aside" "footer"; }
 
-.divSobreNosotros {
+.divTextoSobreNosotros {
   grid-area: parrafos; }
-  .divSobreNosotros p {
+  .divTextoSobreNosotros p {
     text-align: center;
     color: white; }
 
-.divSegundoSobreNosotros {
+.divSegundoTextoSobreNosotros {
   grid-area: parrafos2; }
-  .divSegundoSobreNosotros p {
-    text-align: center;
-    color: white; }
 
 .divImgSobreNosotros {
   display: flex;
@@ -263,6 +260,14 @@ footer {
     justify-self: center;
     width: 22em;
     height: 20em; }
+
+.divdiv {
+  display: flex;
+  height: 75%;
+  align-items: center; }
+  .divdiv p {
+    text-align: center;
+    color: white; }
 
 @media (min-width: 768px) {
   .divImgSobreNosotros img {
@@ -681,7 +686,8 @@ header {
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-weight: bolder;
-  background-image: url(../images/fondoSirena.jpg); }
+  background-image: none;
+  background-color: #E8A0BF; }
 
 .styleTitulos {
   color: white;
@@ -725,9 +731,11 @@ iframe {
 .accordion-body {
   background-color: #A760FF; }
 
+.irAlEncabezado {
+  justify-content: center; }
+
 footer {
-  background-color: #E8A0BF;
-  background-image: none; }
+  background-image: url(../images/fondoSirena.jpg); }
 
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 @media (min-width: 768px) {
@@ -773,6 +781,4 @@ footer {
     margin-bottom: 20px; }
   .styleBody {
     background-image: none;
-    background-color: #E8A0BF; }
-  footer {
-    background-image: url(../images/fondoSirena.jpg); } }
+    background-color: #E8A0BF; } }
