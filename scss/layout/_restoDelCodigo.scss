@@ -6,74 +6,20 @@ font-family: 'Staatliches', cursive;
 
 
 
-
-/*---------------------------------------GRID AREA*/
-.grillaGeneral{
-    display: grid;
-    gap: 20px;
-    grid-template-areas: 
-                        "header"
-                        "titulo"
-                        "carousel"
-                        "masVendidos"
-                        "tutorial"
-                        "preguntas"
-                        "aside"
-                        "footer";
-}
-header{
-    grid-area: header;
-}
-.titulo{
-    grid-area: titulo;
-}
-.divCarousel{
-    grid-area: carousel;
-}
-.grillaMasVendidos{
-    grid-area: masVendidos;
-}
-.divTutorial{
-    grid-area: tutorial;
-}
-.preguntasFrecuentes{
-    grid-area: preguntas;
-}
-aside{
-    grid-area: aside;
-}
-
-footer{
-    grid-area: footer;
-
-}
-
-
-.slide {
-    img {
-        height: 50vh;
-
-    }    
-}
-
-
-.accordion-item{
+.styleTitulos{
+    display: inline-block;
+    color: $color-white;
     font-family: $ff-headings;
-    color: $color-white;
-}
-
-
-/*-----------------------------------------------------------------------------------------------MAIN---------*/
-
-h1, h2, h3, h5 {
-    color: $color-white;
+    font-weight: bolder;
     font-size: 2.5em;
+    background-color: $color-violet-light;
     padding: 25px;
-    text-align: center;
     border: 3px $color-white solid;
     border-radius: 75px;
-    margin: 20px 0px 20px 0px;
-    background-color: $color-violet-light;
+    margin: 15px 0 15px 0;
+
+
+
 }
 
 
@@ -328,6 +274,7 @@ footer{
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 .grillaGeneralSobreNosotros{
+    width: 100%;
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
@@ -341,7 +288,7 @@ footer{
                         "aside"
                         "footer";
 }
-.divTextoSobreNosotros{
+.divTexto{
     grid-area: parrafos;
 
     p{
@@ -350,7 +297,7 @@ footer{
     }
 }
 
-.divSegundoTextoSobreNosotros{
+.divSegundoTexto{
     grid-area: parrafos2;
     
 }

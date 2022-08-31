@@ -11,53 +11,17 @@
 font-family: 'Oswald', sans-serif;
 font-family: 'Staatliches', cursive;
 */
-/*---------------------------------------GRID AREA*/
-.grillaGeneral {
-  display: grid;
-  gap: 20px;
-  grid-template-areas: "header" "titulo" "carousel" "masVendidos" "tutorial" "preguntas" "aside" "footer"; }
-
-header {
-  grid-area: header; }
-
-.titulo {
-  grid-area: titulo; }
-
-.divCarousel {
-  grid-area: carousel; }
-
-.grillaMasVendidos {
-  grid-area: masVendidos; }
-
-.divTutorial {
-  grid-area: tutorial; }
-
-.preguntasFrecuentes {
-  grid-area: preguntas; }
-
-aside {
-  grid-area: aside; }
-
-footer {
-  grid-area: footer; }
-
-.slide img {
-  height: 50vh; }
-
-.accordion-item {
-  font-family: "Staatliches", cursive;
-  color: white; }
-
-/*-----------------------------------------------------------------------------------------------MAIN---------*/
-h1, h2, h3, h5 {
+.styleTitulos {
+  display: inline-block;
   color: white;
+  font-family: "Staatliches", cursive;
+  font-weight: bolder;
   font-size: 2.5em;
+  background-color: #A760FF;
   padding: 25px;
-  text-align: center;
   border: 3px white solid;
   border-radius: 75px;
-  margin: 20px 0px 20px 0px;
-  background-color: #A760FF; }
+  margin: 15px 0 15px 0; }
 
 /*---------------------------------------------------------------------------------------IR AL ENCABEZADO----------*/
 .irAlEncabezado {
@@ -226,19 +190,20 @@ footer {
 
 /*-------------------------------------------------------------------SOBRE NOSOTROS----------*/
 .grillaGeneralSobreNosotros {
+  width: 100%;
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "header" "imagenes" "parrafos" "imagenes2" "parrafos2" "aside" "footer"; }
 
-.divTextoSobreNosotros {
+.divTexto {
   grid-area: parrafos; }
-  .divTextoSobreNosotros p {
+  .divTexto p {
     text-align: center;
     color: white; }
 
-.divSegundoTextoSobreNosotros {
+.divSegundoTexto {
   grid-area: parrafos2; }
 
 .divImgSobreNosotros {
@@ -674,10 +639,6 @@ header {
   color: white;
   font-size: 26px; }
 
-.titulo p {
-  font-size: 2rem;
-  color: white; }
-
 .styleBody {
   font-family: "Oswald", sans-serif;
   height: 100vh;
@@ -689,16 +650,10 @@ header {
   background-image: none;
   background-color: #E8A0BF; }
 
-.styleTitulos {
-  color: white;
-  font-family: "Staatliches", cursive;
-  font-weight: bolder; }
-
 .masVendidos {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  justify-items: center;
   justify-items: center;
   gap: 10px;
   color: white;
@@ -711,6 +666,70 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.grillaGeneral {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "slider" "masVendidos" "tutorial" "preguntas" "aside" "footer"; }
+
+header {
+  grid-area: header; }
+
+.slider {
+  grid-area: slider; }
+
+.grillaMasVendidos {
+  grid-area: masVendidos; }
+
+.divTutorial {
+  grid-area: tutorial; }
+
+.preguntasFrecuentes {
+  grid-area: preguntas; }
+
+aside {
+  grid-area: aside; }
+
+footer {
+  grid-area: footer; }
+
+.slider {
+  width: 100%;
+  margin: auto;
+  overflow: hidden; }
+  .slider ul {
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: slider 20s infinite alternate; }
+  .slider li {
+    width: 100%;
+    list-style: none; }
+    .slider li img {
+      width: 65%; }
+
+@keyframes slider {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100%; }
+  45% {
+    margin-left: -100%; }
+  50% {
+    margin-left: -200%; }
+  70% {
+    margin-left: -200%; }
+  75% {
+    margin-left: -300%; }
+  100% {
+    margin-left: -300%; } }
+
+.accordion-item {
+  font-family: "Staatliches", cursive;
+  color: white; }
 
 .slide img {
   height: 50vh; }
@@ -738,7 +757,7 @@ footer {
   background-image: url(../images/fondoSirena.jpg); }
 
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .masVendidos {
     padding: 1.5em;
     display: grid;
@@ -750,9 +769,7 @@ footer {
   footer {
     padding: 25px;
     border: none;
-    margin: 0; }
-  .preguntasFrecuentes div {
-    text-align: right; } }
+    margin: 0; } }
 
 @media (min-width: 1024px) {
   .masVendidos {

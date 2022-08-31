@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,8 @@
 </head>
 
 <body class="styleBody">
-    <main class="grillaGeneral">
+
+    <div class="grillaGeneral">
 
         <!-- NavBar -->
         <header id="encabezado">
@@ -65,33 +66,31 @@
         </header>
         <!-- /NavBar -->
 
-        <article class="titulo text-center">
-            <p>Bienvenidos a nuestra página, espero que la disfrutes</p>
-        </article>
+        
 
-        <!-- Carousel -->
-        <div id="carouselExampleSlidesOnly" class=" divCarousel carousel slide" data-bs-ride="carousel">
-
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="./images/prueba1.jpg" class="d-block w-100" alt="Foto de carrusel 1">
-                </div>
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./images/prueba2.jpg" class="d-block w-100" alt="Foto de carrusel 2">
-                </div>
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="./images/prueba3.webp" class="d-block w-100" alt="Foto de carrusel 3">
-                </div>
+        <!-- Slider -->
+            <div class="slider">
+                <ul>
+                    <li>
+                        <img src="./images/prueba1.jpg" alt=""> 
+                    </li>
+                    <li>
+                        <img src="./images/prueba2.jpg" alt=""> 
+                    </li>
+                    <li>
+                        <img src="./images/prueba3.jpg" alt=""> 
+                    </li>
+                    <li>
+                        <img src="./images/prueba4.jpg" alt=""> 
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!-- /Carousel -->
+        <!-- Slider -->
 
 
         <!-- Más Vendidos -->
         <section class="grillaMasVendidos">
-            <h3 class="animation-textSombra display-4 styleTitulos">LOS MÁS VENDIDOS</h3> <!--Acá se pondrán los productos PROPIOS más vendidos-->
+            <h3 class=" styleTitulos">LOS MÁS VENDIDOS</h3> 
 
             <div class="masVendidos">
                 <div class="styleImgMasVendidos">
@@ -120,9 +119,9 @@
 
         <!-- Video Tutorial -->
         <div>
-            <h4 class="animation-textSombra display-4 styleTitulos">TUTORIAL</h4>
+            <h4 class="display-4 styleTitulos">TUTORIAL</h4>
             <div class="divTutorial">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1gHN1r542cQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1gHN1r542cQ" alt="Video tutorial de glitter" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
             </div>  
         </div>
         <!-- /Video Tutorial -->
@@ -130,7 +129,7 @@
 
         <!-- Accordion -->
         <div class="accordion preguntasFrecuentes" id="accordionExample">
-            <h4>PREGUNTAS FRECUENTES</h4>
+            <h5 class="display-4 styleTitulos">PREGUNTAS FRECUENTES</h5>
             <div class="accordion-item ">
                 <h7 class="accordion-header" id="headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Se puede comer el glitter?</button>
@@ -139,7 +138,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <strong>NO, no se puede.</strong>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio eaque minus laudantium quos aut nobis.
+                        Por favor reiteramos: NO SE COMAN EL GLITTER
                     </div>
                 </div>
             </div>
@@ -186,37 +185,38 @@
 
             <!-- Section: Social media -->
             <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-facebook"></i></a>
+                <!-- Mail -->
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="https://www.instagram.com/sirena.glitter/" role="button"><i class="fa-regular fa-envelope"></i></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fab fa-instagram"></i
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="https://www.instagram.com/sirena.glitter/" role="button"><i class="fab fa-instagram"></i
                 ></a>
 
                 <!-- WhatsApp -->
-                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="https://www.instagram.com/sirena.glitter/" role="button"><i class="fa-brands fa-whatsapp"></i></a>
 
                 <!-- TikTok -->
-                <a class="btn btn-lg btn-outline-light btn-floating m-3" href="#!" role="button"><i class="fa-brands fa-tiktok"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-floating m-3" href=href="https://www.instagram.com/sirena.glitter/" role="button"><i class="fa-brands fa-tiktok"></i></a>
             </section>
-            <!-- Section: Social media -->
+            <!-- /Section: Social media -->
 
             </div>
-            <!-- Grid container -->
+            <!-- /Grid container -->
 
             <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright
         </div>
-        <!-- Copyright -->
-        </footer>    
+        <!-- /Copyright -->
+        </footer>
+        <!-- /Footer -->    
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
-    </main>
+    </div>
     
 </body>
 </html>

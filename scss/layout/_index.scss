@@ -1,9 +1,4 @@
-.titulo{
-    p{
-        font-size: 2rem;
-        color: white;
-    }
-}
+
 
 .styleBody{
     font-family: $ff-body;
@@ -15,16 +10,12 @@
     font-weight: bolder;
     background-image: none;
     background-color: $color-pink;}
-.styleTitulos{
-    color: white;
-    font-family: $ff-headings;
-    font-weight: bolder;
-}
+
+
 .masVendidos{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    justify-items: center;
     justify-items: center;
     gap: 10px;
     color: white;
@@ -42,6 +33,83 @@
     align-items: center;
 }
 
+.grillaGeneral{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+                        "header"
+                        "slider"
+                        "masVendidos"
+                        "tutorial"
+                        "preguntas"
+                        "aside"
+                        "footer";
+}
+header{
+    grid-area: header;
+}
+
+.slider{
+    grid-area: slider;
+}
+.grillaMasVendidos{
+    grid-area: masVendidos;
+}
+.divTutorial{
+    grid-area: tutorial;
+}
+.preguntasFrecuentes{
+    grid-area: preguntas;
+}
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+
+}
+
+.slider{
+    
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    ul{
+        padding: 0;
+        display: flex;
+        width: 400%;
+
+        animation: slider 20s infinite alternate;
+    }
+    li{
+        width: 100%;
+        list-style: none;
+        img{
+            width: 65%;
+        }
+    }
+}
+
+@keyframes slider{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+    
+}
+.accordion-item{
+    font-family: $ff-headings;
+    color: $color-white;
+}
 
 .slide{
     img {
@@ -60,6 +128,7 @@
 iframe {
     width: 70%;
 }
+
 
 
 .accordion-button{
@@ -82,7 +151,7 @@ footer{
     background-image: url(../images/fondoSirena.jpg);}
 /**************************************************************************************--MEDIA QUERYS--*****************************************************************************************************************/
 
-@media (min-width:768px) {
+@media (min-width:500px) {
 
     .masVendidos{
         padding: 1.5em;
@@ -104,12 +173,7 @@ footer{
     }
 
 
-    .preguntasFrecuentes{
 
-        div {
-            text-align: right;
-        }
-    }
 }
 
 @media (min-width:1024px) {
